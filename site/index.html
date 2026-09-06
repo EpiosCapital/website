@@ -58,9 +58,11 @@
   h2 { font-size: clamp(30px,4.4vw,52px); line-height: 1.05; letter-spacing: -0.025em; }
 
   /* Ticker */
+  .ticker-track > span { min-width: 100vw; }
   .ticker { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); height: 34px; display: flex; align-items: center; }
   .ticker-track {
     display: flex; width: max-content; animation: ticker 38s linear infinite;
+    /* each span holds the phrase 5x and is at least a screen wide, so the loop always fills the viewport */
     font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.14em; color: #8a8a85; white-space: nowrap;
   }
 
@@ -207,8 +209,8 @@
 
 <div class="ticker">
   <div class="ticker-track">
-    <span>SITE&nbsp;UNDER&nbsp;DEVELOPMENT&nbsp;&nbsp;·&nbsp;&nbsp;LIVE&nbsp;DATA&nbsp;IN&nbsp;THE&nbsp;WORKS&nbsp;&nbsp;·&nbsp;&nbsp;AUM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;MoM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;TRANSPARENCY:&nbsp;MONTHLY&nbsp;&nbsp;·&nbsp;&nbsp;</span>
-    <span aria-hidden="true">SITE&nbsp;UNDER&nbsp;DEVELOPMENT&nbsp;&nbsp;·&nbsp;&nbsp;LIVE&nbsp;DATA&nbsp;IN&nbsp;THE&nbsp;WORKS&nbsp;&nbsp;·&nbsp;&nbsp;AUM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;MoM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;TRANSPARENCY:&nbsp;MONTHLY&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>SITE&nbsp;UNDER&nbsp;DEVELOPMENT&nbsp;&nbsp;·&nbsp;&nbsp;LIVE&nbsp;DATA&nbsp;IN&nbsp;THE&nbsp;WORKS&nbsp;&nbsp;·&nbsp;&nbsp;AUM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;MoM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;SITE&nbsp;UNDER&nbsp;DEVELOPMENT&nbsp;&nbsp;·&nbsp;&nbsp;LIVE&nbsp;DATA&nbsp;IN&nbsp;THE&nbsp;WORKS&nbsp;&nbsp;·&nbsp;&nbsp;AUM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;MoM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;SITE&nbsp;UNDER&nbsp;DEVELOPMENT&nbsp;&nbsp;·&nbsp;&nbsp;LIVE&nbsp;DATA&nbsp;IN&nbsp;THE&nbsp;WORKS&nbsp;&nbsp;·&nbsp;&nbsp;AUM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;MoM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;SITE&nbsp;UNDER&nbsp;DEVELOPMENT&nbsp;&nbsp;·&nbsp;&nbsp;LIVE&nbsp;DATA&nbsp;IN&nbsp;THE&nbsp;WORKS&nbsp;&nbsp;·&nbsp;&nbsp;AUM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;MoM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;SITE&nbsp;UNDER&nbsp;DEVELOPMENT&nbsp;&nbsp;·&nbsp;&nbsp;LIVE&nbsp;DATA&nbsp;IN&nbsp;THE&nbsp;WORKS&nbsp;&nbsp;·&nbsp;&nbsp;AUM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;MoM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span aria-hidden="true">SITE&nbsp;UNDER&nbsp;DEVELOPMENT&nbsp;&nbsp;·&nbsp;&nbsp;LIVE&nbsp;DATA&nbsp;IN&nbsp;THE&nbsp;WORKS&nbsp;&nbsp;·&nbsp;&nbsp;AUM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;MoM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;SITE&nbsp;UNDER&nbsp;DEVELOPMENT&nbsp;&nbsp;·&nbsp;&nbsp;LIVE&nbsp;DATA&nbsp;IN&nbsp;THE&nbsp;WORKS&nbsp;&nbsp;·&nbsp;&nbsp;AUM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;MoM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;SITE&nbsp;UNDER&nbsp;DEVELOPMENT&nbsp;&nbsp;·&nbsp;&nbsp;LIVE&nbsp;DATA&nbsp;IN&nbsp;THE&nbsp;WORKS&nbsp;&nbsp;·&nbsp;&nbsp;AUM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;MoM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;SITE&nbsp;UNDER&nbsp;DEVELOPMENT&nbsp;&nbsp;·&nbsp;&nbsp;LIVE&nbsp;DATA&nbsp;IN&nbsp;THE&nbsp;WORKS&nbsp;&nbsp;·&nbsp;&nbsp;AUM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;MoM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;SITE&nbsp;UNDER&nbsp;DEVELOPMENT&nbsp;&nbsp;·&nbsp;&nbsp;LIVE&nbsp;DATA&nbsp;IN&nbsp;THE&nbsp;WORKS&nbsp;&nbsp;·&nbsp;&nbsp;AUM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;MoM&nbsp;—&nbsp;&nbsp;·&nbsp;&nbsp;</span>
   </div>
 </div>
 
@@ -241,7 +243,7 @@
   <div class="wrap">
     <div class="mono" style="font-size:12px;letter-spacing:0.2em;color:var(--dimmer);margin-bottom:34px;">// EST.&nbsp;2026</div>
     <h1>Epios&nbsp;Capital<span class="caret">_</span></h1>
-    <p class="hero-lede">A systematic trading firm built on radical transparency. We publish what we manage, what we trade, and where the profits go &mdash; every month.</p>
+    <p class="hero-lede">A systematic trading firm. Our small team has broad and deep expertise in diverse disciplines of mathematics, machine learning, high-performance C++ and much more. We have a love for aesthetic code, and optimize for more than just profit.</p>
     <div class="cells cells-4" style="margin-top:64px;">
       <div class="stat"><div class="k">AUM</div><div class="v">—</div></div>
       <div class="stat"><div class="k">MoM</div><div class="v">—</div></div>
@@ -294,17 +296,7 @@
       <div class="metric">
         <div class="k">CODEBASE</div>
         <div class="v">C++ / Python</div>
-      </div>
-    </div>
-
-    <div class="cells cells-2" style="border-top:none;">
-      <div class="card">
-        <div class="stack-head"><div class="lang">C++</div><div class="card-title">Simulation &amp; live trading</div></div>
-        <p>The same code path that backtests a strategy runs it in production. One engine, no translation layer between research and the market.</p>
-      </div>
-      <div class="card">
-        <div class="stack-head"><div class="lang">PYTHON</div><div class="card-title">Machine learning &amp; research</div></div>
-        <p>Model development, feature research, and evaluation. Fast to iterate, and it hands finished signals straight to the C++ stack.</p>
+        <div class="s">The same code path that backtests a strategy runs it in production. One engine, no translation layer between research and the market.</div>
       </div>
     </div>
   </div>
@@ -316,7 +308,7 @@
   <div class="wrap">
     <div class="eyebrow">03&nbsp;&nbsp;/&nbsp;&nbsp;CAREERS</div>
     <h2 style="max-width:18ch;">Open Positions</h2>
-    <p class="lede">Small team, high trust, real ownership. If you want to see exactly what the firm does &mdash; you already can, that's the point.</p>
+    <p class="lede">Small team, high trust, complete fund transparency, real ownership. All positions are fully remote, now and forever. Send over your resume to careers@epioscapital.com along with a short description of your expertise and career goals.</p>
 
     <div class="roles">
       <a class="role" href="mailto:careers@epioscapital.com?subject=Machine%20Learning%20Engineer">
